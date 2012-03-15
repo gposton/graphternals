@@ -42,7 +42,10 @@ class Svn
           uri.scheme ||= path.uri.scheme
           uri.host ||= path.uri.host
           external = add_external(uri.to_s)
-          add_externals(external)
+          # only look for externals if it doesn't currently have any
+          # if it already has externals we can assume this was done
+          # in a previous iteration
+          add_externals(external) if external.externals.empty?
           path.externals << external
         end
       end
