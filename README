@@ -1,0 +1,18 @@
+Create a dependency graph of your svn repositories and their external repositories.
+
+h1. Install
+# clone repo
+# bundle install
+
+h1. Usage
+graphternals.rb (svn_repo)*
+
+example:
+graphternals.rb svn://hostname.com/product1/trunk svn://hostname.com/product2/trunk
+
+h1. limitations
+- in progress
+
+h1. Todos
+- flag to read the list of svn repositories from a file
+- flag for enable/disable verbose
