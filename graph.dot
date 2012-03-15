@@ -1,250 +1,45 @@
-digraph RGL__DirectedAdjacencyGraph {
-    "/php-code-coverage/tags/v1.1.1@57" [
-        fontsize = 8,
-        label = "/php-code-coverage/tags/v1.1.1@57"
-    ]
+digraph {
+    "svn+ssh://svn01.colo/subversion-testing/trunk@32"
 
-    "/shunt@55" [
-        fontsize = 8,
-        label = "/shunt@55"
-    ]
+    subgraph {
+        "svn+ssh://svn01.colo/rake" [
+            color = "#4957a1"
+        ]
 
-    "/php-timer/tags/v1.0.2@55" [
-        fontsize = 8,
-        label = "/php-timer/tags/v1.0.2@55"
-    ]
+        "@186" [
+            color = "#4957a1"
+        ]
 
-    "svn+ssh://svn01.colo/phpquery/phpQuery@1" [
-        fontsize = 8,
-        label = "svn+ssh://svn01.colo/phpquery/phpQuery@1"
-    ]
+        "svn+ssh://svn01.colo/rake" -> "@186" [
+            arrowsize = 0,
+            color = "#4957a1"
+        ]
+    }
 
-    "/php-token-stream/tags/v1.1.1@55" [
-        fontsize = 8,
-        label = "/php-token-stream/tags/v1.1.1@55"
-    ]
+    subgraph {
+        "svn+ssh://svn01.colo/rake" [
+            color = "#4957a1"
+        ]
 
-    "@13" [
-        fontsize = 8,
-        label = "@13"
-    ]
+        "@187" [
+            color = "#4957a1"
+        ]
 
-    "svn+ssh://svn01.colo/siteutilities" [
-        fontsize = 8,
-        label = "svn+ssh://svn01.colo/siteutilities"
-    ]
+        "svn+ssh://svn01.colo/rake" -> "@187" [
+            arrowsize = 0,
+            color = "#4957a1"
+        ]
+    }
 
-    "svn+ssh://svn01.colo/test-functional/tags/0.1.5@14" [
-        fontsize = 8,
-        label = "svn+ssh://svn01.colo/test-functional/tags/0.1.5@14"
-    ]
+    "svn+ssh://svn01.colo/subversion-testing/trunk@32"
 
-    "/php-text-template/tags/v1.1.1@55" [
-        fontsize = 8,
-        label = "/php-text-template/tags/v1.1.1@55"
-    ]
+    "@187"
 
-    "svn+ssh://svn01.colo/yui_compressor/tags/rev8@14" [
-        fontsize = 8,
-        label = "svn+ssh://svn01.colo/yui_compressor/tags/rev8@14"
-    ]
+    "svn+ssh://svn01.colo/subversion-testing/trunk@32" -> "@187"
 
-    "/phpunit-mock-objects/tags/v1.1.0/PHPUnit@55" [
-        fontsize = 8,
-        label = "/phpunit-mock-objects/tags/v1.1.0/PHPUnit@55"
-    ]
+    "svn+ssh://svn01.colo/subversion-testing/trunk@32"
 
-    "svn+ssh://svn01.colo/phpunit" [
-        fontsize = 8,
-        label = "svn+ssh://svn01.colo/phpunit"
-    ]
+    "@186"
 
-    "svn+ssh://svn01.colo/rake@187" [
-        fontsize = 8,
-        label = "svn+ssh://svn01.colo/rake@187"
-    ]
-
-    "svn+ssh://svn01.colo/marketing-i18n@23" [
-        fontsize = 8,
-        label = "svn+ssh://svn01.colo/marketing-i18n@23"
-    ]
-
-    "/trunk@103" [
-        fontsize = 8,
-        label = "/trunk@103"
-    ]
-
-    "svn+ssh://svn01.colo/authentication/tags/v1.4/lib@26" [
-        fontsize = 8,
-        label = "svn+ssh://svn01.colo/authentication/tags/v1.4/lib@26"
-    ]
-
-    "/php-file-iterator/tags/v1.3.0@55" [
-        fontsize = 8,
-        label = "/php-file-iterator/tags/v1.3.0@55"
-    ]
-
-    "/phpunit/tags/v3.6.7/PHPUnit@58" [
-        fontsize = 8,
-        label = "/phpunit/tags/v3.6.7/PHPUnit@58"
-    ]
-
-    "/tags/rev59@123" [
-        fontsize = 8,
-        label = "/tags/rev59@123"
-    ]
-
-    "svn+ssh://svn01.colo/simpleframe/tags/2.5.4@324" [
-        fontsize = 8,
-        label = "svn+ssh://svn01.colo/simpleframe/tags/2.5.4@324"
-    ]
-
-    "svn+ssh://svn01.colo/marketing-site/trunk@5321" [
-        fontsize = 8,
-        label = "svn+ssh://svn01.colo/marketing-site/trunk@5321"
-    ]
-
-    "svn+ssh://svn01.colo/siteutilities" -> "/trunk@103" [
-        fontsize = 8
-    ]
-
-    "svn+ssh://svn01.colo/siteutilities" -> "/tags/rev59@123" [
-        fontsize = 8
-    ]
-
-    "svn+ssh://svn01.colo/test-functional/tags/0.1.5@14" -> "svn+ssh://svn01.colo/phpquery/phpQuery@1" [
-        fontsize = 8
-    ]
-
-    "svn+ssh://svn01.colo/yui_compressor/tags/rev8@14" -> "@13" [
-        fontsize = 8
-    ]
-
-    "svn+ssh://svn01.colo/phpunit" -> "/php-code-coverage/tags/v1.1.1@57" [
-        fontsize = 8
-    ]
-
-    "svn+ssh://svn01.colo/phpunit" -> "/shunt@55" [
-        fontsize = 8
-    ]
-
-    "svn+ssh://svn01.colo/phpunit" -> "/php-timer/tags/v1.0.2@55" [
-        fontsize = 8
-    ]
-
-    "svn+ssh://svn01.colo/phpunit" -> "@13" [
-        fontsize = 8
-    ]
-
-    "svn+ssh://svn01.colo/phpunit" -> "/php-token-stream/tags/v1.1.1@55" [
-        fontsize = 8
-    ]
-
-    "svn+ssh://svn01.colo/phpunit" -> "/php-text-template/tags/v1.1.1@55" [
-        fontsize = 8
-    ]
-
-    "svn+ssh://svn01.colo/phpunit" -> "/phpunit-mock-objects/tags/v1.1.0/PHPUnit@55" [
-        fontsize = 8
-    ]
-
-    "svn+ssh://svn01.colo/phpunit" -> "/php-file-iterator/tags/v1.3.0@55" [
-        fontsize = 8
-    ]
-
-    "svn+ssh://svn01.colo/phpunit" -> "/phpunit/tags/v3.6.7/PHPUnit@58" [
-        fontsize = 8
-    ]
-
-    "svn+ssh://svn01.colo/marketing-i18n@23" -> "@13" [
-        fontsize = 8
-    ]
-
-    "/trunk@103" -> "@13" [
-        fontsize = 8
-    ]
-
-    "/trunk@103" -> "svn+ssh://svn01.colo/rake@187" [
-        fontsize = 8
-    ]
-
-    "/trunk@103" -> "svn+ssh://svn01.colo/marketing-i18n@23" [
-        fontsize = 8
-    ]
-
-    "/tags/rev59@123" -> "@13" [
-        fontsize = 8
-    ]
-
-    "svn+ssh://svn01.colo/simpleframe/tags/2.5.4@324" -> "@13" [
-        fontsize = 8
-    ]
-
-    "svn+ssh://svn01.colo/simpleframe/tags/2.5.4@324" -> "svn+ssh://svn01.colo/rake@187" [
-        fontsize = 8
-    ]
-
-    "svn+ssh://svn01.colo/simpleframe/tags/2.5.4@324" -> "/tags/rev59@123" [
-        fontsize = 8
-    ]
-
-    "svn+ssh://svn01.colo/marketing-site/trunk@5321" -> "/shunt@55" [
-        fontsize = 8
-    ]
-
-    "svn+ssh://svn01.colo/marketing-site/trunk@5321" -> "/php-code-coverage/tags/v1.1.1@57" [
-        fontsize = 8
-    ]
-
-    "svn+ssh://svn01.colo/marketing-site/trunk@5321" -> "/php-timer/tags/v1.0.2@55" [
-        fontsize = 8
-    ]
-
-    "svn+ssh://svn01.colo/marketing-site/trunk@5321" -> "/php-token-stream/tags/v1.1.1@55" [
-        fontsize = 8
-    ]
-
-    "svn+ssh://svn01.colo/marketing-site/trunk@5321" -> "svn+ssh://svn01.colo/yui_compressor/tags/rev8@14" [
-        fontsize = 8
-    ]
-
-    "svn+ssh://svn01.colo/marketing-site/trunk@5321" -> "/php-text-template/tags/v1.1.1@55" [
-        fontsize = 8
-    ]
-
-    "svn+ssh://svn01.colo/marketing-site/trunk@5321" -> "svn+ssh://svn01.colo/test-functional/tags/0.1.5@14" [
-        fontsize = 8
-    ]
-
-    "svn+ssh://svn01.colo/marketing-site/trunk@5321" -> "/trunk@103" [
-        fontsize = 8
-    ]
-
-    "svn+ssh://svn01.colo/marketing-site/trunk@5321" -> "/phpunit-mock-objects/tags/v1.1.0/PHPUnit@55" [
-        fontsize = 8
-    ]
-
-    "svn+ssh://svn01.colo/marketing-site/trunk@5321" -> "svn+ssh://svn01.colo/marketing-i18n@23" [
-        fontsize = 8
-    ]
-
-    "svn+ssh://svn01.colo/marketing-site/trunk@5321" -> "svn+ssh://svn01.colo/rake@187" [
-        fontsize = 8
-    ]
-
-    "svn+ssh://svn01.colo/marketing-site/trunk@5321" -> "svn+ssh://svn01.colo/authentication/tags/v1.4/lib@26" [
-        fontsize = 8
-    ]
-
-    "svn+ssh://svn01.colo/marketing-site/trunk@5321" -> "/php-file-iterator/tags/v1.3.0@55" [
-        fontsize = 8
-    ]
-
-    "svn+ssh://svn01.colo/marketing-site/trunk@5321" -> "/phpunit/tags/v3.6.7/PHPUnit@58" [
-        fontsize = 8
-    ]
-
-    "svn+ssh://svn01.colo/marketing-site/trunk@5321" -> "svn+ssh://svn01.colo/simpleframe/tags/2.5.4@324" [
-        fontsize = 8
-    ]
+    "svn+ssh://svn01.colo/subversion-testing/trunk@32" -> "@186"
 }

@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
-%w{lib/svn lib/repository lib/path rgl/adjacency rgl/dot}.each{|x| require x}
-include RGL
+%w{lib/svn lib/repository lib/path rgl/dot}.each{|x| require x}
+include RGL::DOT
 
 VERBOSE = true
 
@@ -22,17 +22,32 @@ end
 
 def graph_externals(graph, path)
   path.externals.each do |external|
-    graph.add_edge node_name(path), node_name(external)
+    graph << Node.new('name' => node_name(path))
+    graph << Node.new('name' => node_name(external))
+    graph << DirectedEdge.new('from' => node_name(path), 'to' => node_name(external))
     graph = graph_externals(graph, external)
   end
   graph
 end
 
 def graph_code_lines(svn)
-  graph = DirectedAdjacencyGraph.new
+  graph = Digraph.new
+  svn.code_lines.merge(svn.externals).each_value do |repository|
+    color = "#%06x" % (rand * 0xffffff)
+    repository.paths.each_value do |path|
+      if repository.paths.size > 1
+        repo_graph = Subgraph.new
+        repo_graph << Node.new('name' => repository.to_s, 'color' => color)
+        repo_graph << Node.new('name' => node_name(path), 'color' => color)
+        repo_graph << DirectedEdge.new('from' => repository.to_s, 'to' => node_name(path), 'color' => color, 'arrowsize' => 0)
+        graph << repo_graph
+      else
+        graph << Node.new('name' => node_name(path))
+      end
+    end
+  end
   svn.code_lines.merge(svn.externals).each_value do |repository|
     repository.paths.each_value do |path|
-      graph.add_edge repository.to_s, node_name(path) if repository.paths.size > 1
       graph = graph_externals(graph, path)
     end
   end
@@ -63,4 +78,8 @@ end
   #end
 #end
 
-graph_code_lines(svn).write_to_graphic_file
+#graph_code_lines(svn).write_to_graphic_file
+aFile = File.new("graph.dot", "w")
+aFile.write(graph_code_lines(svn).to_s)
+aFile.close
+%x{dot -Tpng graph.dot -o graph.png}
