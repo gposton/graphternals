@@ -24,7 +24,7 @@ def graph_externals(graph, path)
   path.externals.each do |external|
     graph << Node.new('name' => node_name(path))
     graph << Node.new('name' => node_name(external))
-    graph << DirectedEdge.new('from' => node_name(path), 'to' => node_name(external))
+    graph << DirectedEdge.new('from' => node_name(path), 'to' => node_name(external)) 
     graph = graph_externals(graph, external)
   end
   graph
@@ -46,7 +46,7 @@ def graph_code_lines(svn)
       end
     end
   end
-  svn.code_lines.merge(svn.externals).each_value do |repository|
+  svn.code_lines.each_value do |repository|
     repository.paths.each_value do |path|
       graph = graph_externals(graph, path)
     end

@@ -10,9 +10,12 @@ graphternals.rb (svn_repo)*
 example:
 graphternals.rb svn://hostname.com/product1/trunk svn://hostname.com/product2/trunk
 
+When finished graph.dot and graph.png will exist.
+
 h1. limitations
 - in progress
 
 h1. Todos
 - flag to read the list of svn repositories from a file
 - flag for enable/disable verbose
+- flag to specify output file location and name
