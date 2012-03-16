@@ -45,6 +45,9 @@ class Svn
           # only look for externals if it doesn't currently have any
           # if it already has externals we can assume this was done
           # in a previous iteration
+          # TODO: This was a quick improvement, theres a better way to optimize this
+          # Problem is that if an external has no additional externals
+          # it will continue to be checked.
           add_externals(external) if external.externals.empty?
           path.externals << external
         end

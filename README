@@ -17,5 +17,4 @@ h1. limitations
 
 h1. Todos
 - flag to read the list of svn repositories from a file
-- flag for enable/disable verbose
-- flag to specify output file location and name
+- handle -r (revision) notation in svn:external properties
