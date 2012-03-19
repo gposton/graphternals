@@ -11,8 +11,8 @@ options['verbose'] = false
 opts = OptionParser.new do |opts|
   opts.banner = 'Usage: graphternal.rb (svn_repo)* [options['']'
 
-  opts.on('-f', '--file', 'Output file', ' (will use graph.png if not supplied)') do |path|
-    options['file'] = File.new(path)
+  opts.on('-f', '--file [PATH]', 'Output file', ' (will use graph.png if not supplied)') do |path|
+    options['file'] = path
   end
 
   opts.on("-v", "--[no-]verbose", "Run verbosely") do |v|
